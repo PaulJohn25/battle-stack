@@ -1,0 +1,231 @@
+/* === Testimonial Section === */
+
+.testimonial__container > * + * {
+  margin-top: 1rem;
+}
+
+/* === Heading and Description === */
+.testimonial__title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: var(--size-2xl);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.testimonial__description {
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: var(--size-sm);
+  color: var(--clr-slate400);
+  line-height: 2;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  max-width: 45ch;
+}
+
+/* === Testimonial Box === */
+.testimonial__box {
+  background-color: var(--clr-card-bg);
+  padding: 2rem 1.5rem;
+  border-radius: 6px;
+  height: 224px;
+}
+
+.testimonial__box--top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial__box-profile-qoutesIcon {
+  font-size: var(--size-4xl);
+  color: var(--clr-blue600);
+}
+
+/* === Profile Info === */
+.testimonial__box-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial__box-profile-img {
+  width: var(--size-5xl);
+  height: var(--size-5xl);
+  border-radius: 50%;
+}
+
+.testimonial__box-profile-name {
+  font-weight: 800;
+  font-size: var(--size-sm);
+  line-height: 0.75rem;
+  color: var(--clr-light);
+}
+
+.testimonial__box-profile-position {
+  font-size: var(--size-xs);
+  color: var(--clr-muted);
+}
+
+/* === Comment === */
+.testimonial__box-comment {
+  margin-top: 1rem;
+  font-size: var(--size-xs);
+  color: var(--clr-slate400);
+  max-width: 45ch;
+}
+
+/* === Swiper === */
+.swiper {
+  padding-bottom: 2rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--clr-slate400);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--clr-blue600) !important;
+}
+
+/* == Responsive Breakpoints == */
+
+/* XS (≥475px) */
+@media (min-width: 475px) {
+  .testimonial__title {
+    font-size: var(--size-3xl);
+  }
+
+  .testimonial__description {
+    font-size: var(--size-base);
+  }
+
+  .testimonial__box-profile-img {
+    width: var(--size-6xl);
+    height: var(--size-6xl);
+  }
+
+  .testimonial__box-profile-name {
+    font-size: var(--size-base);
+    line-height: 1;
+  }
+
+  .testimonial__box-comment {
+    font-size: var(--size-sm);
+  }
+
+  .testimonial__box-profile-qoutesIcon {
+    font-size: var(--size-5xl);
+  }
+}
+
+/* SM (≥640px) */
+@media (min-width: 640px) {
+  .testimonial__box-profile-img {
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+  }
+
+  .testimonial__box-profile-name {
+    font-size: var(--size-sm);
+  }
+
+  .testimonial__box-profile-position {
+    font-size: var(--size-xxs);
+  }
+
+  .testimonial__box-comment {
+    font-size: var(--size-xs);
+  }
+
+  .testimonial__box-profile-qoutesIcon {
+    font-size: var(--size-4xl);
+  }
+}
+
+/* MD (≥768px) */
+@media (min-width: 768px) {
+  .testimonial__description {
+    font-size: var(--size-base);
+  }
+
+  .testimonial__box-profile-img {
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+  }
+
+  .testimonial__box-profile-name {
+    font-size: var(--size-base);
+  }
+
+  .testimonial__box-profile-position {
+    font-size: var(--size-xs);
+  }
+
+  .testimonial__box-comment {
+    font-size: var(--size-sm);
+  }
+
+  .testimonial__box-profile-qoutesIcon {
+    font-size: var(--size-4xl);
+  }
+}
+
+/* LG (≥1024px) */
+@media (min-width: 1024px) {
+  .testimonial__title {
+    font-size: var(--size-4xl);
+  }
+
+  .testimonial__description {
+    font-size: var(--size-base);
+  }
+}
+
+/* XL (≥1280px) */
+@media (min-width: 1280px) {
+  .testimonial__title {
+    font-size: var(--size-5xl);
+    margin-bottom: 2rem;
+  }
+
+  .testimonial__description {
+    font-size: var(--size-xl);
+    margin-bottom: 3rem;
+    max-width: 55ch;
+  }
+
+  .testimonial__box {
+    height: auto;
+  }
+
+  .testimonial__box-profile-img {
+    width: var(--size-6xl);
+    height: var(--size-6xl);
+  }
+
+  .testimonial__box-profile-name {
+    font-size: var(--size-lg);
+  }
+
+  .testimonial__box-profile-position {
+    font-size: var(--size-sm);
+  }
+
+  .testimonial__box-comment {
+    font-size: var(--size-base);
+  }
+
+  .testimonial__box-profile-qoutesIcon {
+    font-size: var(--size-5xl);
+  }
+
+  .swiper {
+    padding-bottom: 3rem;
+  }
+
+  .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+  }
+}

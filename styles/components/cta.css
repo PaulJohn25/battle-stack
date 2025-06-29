@@ -1,0 +1,119 @@
+/* == Call To Action (CTA) Section == */
+
+.cta__container {
+  text-align: center;
+}
+
+.cta__container > * + * {
+  margin-top: 1rem;
+}
+
+.cta__img {
+  width: var(--size-7xl);
+  height: var(--size-7xl);
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+.cta__title {
+  font-size: var(--size-2xl);
+  margin-top: 0.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.cta__description {
+  font-family: var(--font-secondary);
+  font-size: var(--size-sm);
+  color: var(--clr-muted);
+  max-width: 45ch;
+}
+
+.cta__btn {
+  font-size: var(--size-xs);
+}
+
+.cta__enter-app-btn__arrow {
+  width: 1em;
+  display: inline;
+  vertical-align: middle;
+  font-size: var(--size-base);
+}
+
+/* == Responsive Breakpoints == */
+
+/* XS (≥475px) */
+@media (min-width: 475px) {
+  .cta__title {
+    font-size: var(--size-3xl);
+  }
+
+  .cta__description {
+    font-size: var(--size-base);
+  }
+
+  .cta__img {
+    width: var(--size-8xl);
+    height: var(--size-8xl);
+  }
+
+  .cta__btn {
+    font-size: var(--size-sm);
+  }
+}
+
+/* SM (≥640px) */
+@media (min-width: 640px) {
+  .cta__description {
+    margin-inline: auto;
+    max-width: 53ch;
+  }
+
+  .cta__btn {
+    font-size: var(--size-base);
+  }
+}
+
+/* LG (≥1024px) */
+@media (min-width: 1024px) {
+  .cta__title {
+    font-size: var(--size-4xl);
+  }
+
+  .cta__description {
+    font-size: var(--size-lg);
+  }
+
+  .cta__img {
+    width: var(--size-9xl);
+    height: var(--size-9xl);
+  }
+
+  .cta > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+/* XL (≥1280px) */
+@media (min-width: 1280px) {
+  .cta__title {
+    font-size: var(--size-5xl);
+  }
+
+  .cta__description {
+    font-size: var(--size-xl);
+  }
+
+  .cta__img {
+    width: var(--size-10xl);
+    height: var(--size-10xl);
+  }
+
+  .cta__btn {
+    font-size: var(--size-lg);
+  }
+
+  .cta > * + * {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+.mobile__nav {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: var(--clr-dark);
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  will-change: height;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.mobile__nav.show {
+  height: 100vh;
+}
+
+.mobile__nav-container {
+  height: 100%;
+  width: 100%;
+}
+
+.mobile__nav-link-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile__nav-link {
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: var(--size-sm);
+  color: var(--clr-slate300);
+  transition: color 0.3s;
+}
+
+.mobile__nav-link:hover {
+  color: var(--clr-slate400);
+}
+
+.mobile__nav-separator {
+  padding-left: 5rem;
+  border: 1px solid var(--clr-slate800);
+}
+
+.mobile__nav-sign-in-btn {
+  text-decoration: none;
+  font-family: var(--font-secondary);
+  font-size: var(--size-sm);
+  color: var(--clr-text);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.mobile__nav-enter-app-btn {
+  font-size: var(--size-sm);
+}
+
+.mobile__nav-enter-app-btn__arrow {
+  display: inline;
+  vertical-align: middle;
+  font-size: var(--size-base);
+  width: 1em;
+}

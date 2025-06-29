@@ -1,0 +1,337 @@
+.sign-in {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sign-in__container1,
+.sign-in__container2 {
+  width: 100%;
+}
+
+.sign-in__container2 {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.sign-in__img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0 0 10% 10%;
+  display: block;
+}
+
+/* Typography */
+.sign-in__title {
+  font-weight: 900;
+  line-height: 1;
+  font-size: var(--size-3xl);
+}
+
+.sign-in__description,
+.sign-in-label {
+  font-family: var(--font-secondary);
+  font-size: var(--size-sm);
+}
+
+/* Layout Spacing */
+.sign-in__container > * + * {
+  margin-top: 1rem;
+}
+
+.sign-in__container-wrapper > * + * {
+  margin-top: 0.5rem;
+}
+
+/* Button Container */
+.sign-in__btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sign-in__btn {
+  flex: 1;
+  font-weight: 700;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  background-color: var(--clr-slate800);
+  font-size: var(--size-sm);
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in;
+}
+
+.sign-in__btn:hover {
+  background-color: var(--clr-slate900);
+}
+
+.sign-in__btn-icon {
+  width: var(--size-lg);
+  height: var(--size-lg);
+}
+
+.sign-in__separateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--size-sm);
+}
+
+.sign-in__separateContainer p {
+  color: var(--clr-light);
+}
+
+.sign-in__box-separate {
+  border: 1px solid var(--clr-slate800);
+  flex: 1;
+}
+
+/* Form */
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.sign-in-form__label,
+.sign-in-form__note {
+  font-size: var(--size-sm);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--clr-light);
+}
+
+.sign-in-form__input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: var(--size-sm);
+  border: 1px solid var(--clr-text);
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 0.5rem;
+}
+
+.sign-in-form__input:focus {
+  outline: none;
+  border-color: var(--clr-slate800);
+  box-shadow: 0 0 0 2px var(--clr-light);
+}
+
+.sign-in-form__button {
+  background-color: var(--clr-blue600) !important;
+  color: var(--clr-light) !important;
+  font-size: var(--size-sm);
+  font-weight: 600 !important;
+}
+
+/* Close Button */
+.sign-in__close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sign-in__close-btn {
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: rgba(2, 6, 23, 0.5);
+  border-radius: 0.375rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sign-in__close-btn:hover,
+.sign-in__close-btn:active {
+  border: 3px solid var(--clr-light);
+}
+
+.sign-in__close-icon {
+  display: inline;
+  vertical-align: middle;
+  width: var(--size-xl);
+  height: var(--size-xl);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 475px) {
+  .sign-in__title {
+    font-size: var(--size-4xl);
+  }
+  .sign-in__description,
+  .sign-in-label,
+  .sign-in__btn,
+  .sign-in__separateContainer,
+  .sign-in-form__label,
+  .sign-in-form__input,
+  .sign-in-form__button {
+    font-size: var(--size-base);
+  }
+  .sign-in__btn-icon {
+    width: var(--size-xl);
+    height: var(--size-xl);
+  }
+  .sign-in-form {
+    gap: 0.6rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sign-in__container {
+    flex-direction: row;
+    height: 100vh;
+    gap: 0;
+  }
+
+  .sign-in__container2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: rgba(2, 6, 23, 0.7);
+    padding: 1.3rem 1.5rem;
+    border-radius: 0.375rem;
+    z-index: 999;
+  }
+  .sign-in__img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    z-index: 0;
+  }
+  .sign-in__container1 {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+  .sign-in__container1::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .sign-in__description,
+  .sign-in-label,
+  .sign-in-form__note,
+  .sign-in__btn,
+  .sign-in__btn-icon,
+  .sign-in__separateContainer,
+  .sign-in-form__label,
+  .sign-in-form__input,
+  .sign-in-form__button {
+    font-size: var(--size-xs);
+  }
+  .sign-in-form__note {
+    color: var(--clr-slate200);
+  }
+  .sign-in__box-separate {
+    border: 1px solid var(--clr-slate400);
+  }
+
+  .sign-in__container-wrapper > * + * {
+    margin-top: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-in__title {
+    font-size: var(--size-3xl);
+  }
+  .sign-in__description,
+  .sign-in-label,
+  .sign-in__btn,
+  .sign-in__separateContainer,
+  .sign-in-form__label,
+  .sign-in-form__input,
+  .sign-in-form__button {
+    font-size: var(--size-sm);
+  }
+  .sign-in__btn-icon {
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+  }
+  .sign-in__box-separate p {
+    font-size: var(--size-2xl);
+  }
+
+  .sign-in__container-wrapper > * + * {
+    margin-top: 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sign-in__title {
+    font-size: var(--size-4xl);
+  }
+
+  .sign-in__description,
+  .sign-in-label,
+  .sign-in__btn,
+  .sign-in__separateContainer,
+  .sign-in-form__label,
+  .sign-in-form__input,
+  .sign-in-form__button {
+    font-size: var(--size-base);
+  }
+
+  .sign-in__btn-icon {
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+  }
+  .sign-in-form__note {
+    font-size: var(--size-sm);
+  }
+
+  .sign-in__close-btn {
+    padding: 0.8rem;
+  }
+
+  .sign-in__close {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .sign-in__container-wrapper > * + * {
+    margin-top: 0.8rem;
+  }
+
+  .sign-in-form {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sign-in__title {
+    font-size: var(--size-5xl);
+  }
+
+  .sign-in__container-wrapper > * + * {
+    margin-top: 1rem;
+  }
+
+  .sign-in__close {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .sign-in__close-icon {
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+  }
+}

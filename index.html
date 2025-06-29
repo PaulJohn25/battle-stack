@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/battle-stack-logo.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+  <title>Battle Stack</title>
+  <meta name="description"
+    content="Battle Stack is a programming course platform where developers level up through coding missions. challenges, and lessons.">
+  <meta name="keywords"
+    content="learn programming, coding course, JavaScript, CSS, NextJS, React, Flutter, Java, Battle Stack">
+  <meta name="author" content="John Paul Imperial" />
+
+  <meta property="og:title" content="Battle Stack - Interactive Programming Courses">
+  <meta property="og:description" content="Level up your skills through missions and coding quests. Join Battle Stack.">
+  <meta property="og:image" content="/assets/images/battle-stack-logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Battle Stack, Learn Programming Through Missions">
+  <meta name="twitter:description" content="Level up your coding skills with Battle Stack.">
+  <meta name="twitter:image" content="/assets/images/battle-stack-logo.png">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="container header__container">
+        <div class="header__title-container">
+          <picture>
+            <source srcset="/assets/images/battle-stack-logo.avif" type="image/avif" />
+            <source srcset="/assets/images/battle-stack-logo.png" type="image/png" />
+            <img src="/assets/images/battle-stack-logo.avif"
+              alt="Logo for Battle Stack, a programming course website, featuring a stylized sword or shield made of code fragments, in energetic blues and oranges."
+              class="header__logo" width="528" height="473" loading="lazy">
+          </picture>
+          <span class="header__title">Battle Stack</span>
+        </div>
+        <button class="header__btn-menu" aria-label="menu button" id="header__btn-menu" aria-expanded="false">
+
+          <!-- Bars Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="header__icon--hamburger" aria-hidden="true" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="1em" width="1em">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+
+          <!-- X Icon-->
+          <svg width="1em" height="1em" class="header__icon--xmark" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)">
+            <path
+              d="M6.21967 7.28033C5.92678 6.98744 5.92678 6.51256 6.21967 6.21967C6.51256 5.92678 6.98744 5.92678 7.28033 6.21967L11.999 10.9384L16.7176 6.2198C17.0105 5.92691 17.4854 5.92691 17.7782 6.2198C18.0711 6.51269 18.0711 6.98757 17.7782 7.28046L13.0597 11.999L17.7782 16.7176C18.0711 17.0105 18.0711 17.4854 17.7782 17.7782C17.4854 18.0711 17.0105 18.0711 16.7176 17.7782L11.999 13.0597L7.28033 17.7784C6.98744 18.0713 6.51256 18.0713 6.21967 17.7784C5.92678 17.4855 5.92678 17.0106 6.21967 16.7177L10.9384 11.999L6.21967 7.28033Z"
+              fill="currentColor" />
+          </svg>
+
+        </button>
+        <nav class="header__menu">
+          <div class="header__link-container">
+            <a href="#courses" class="header__link">Courses</a>
+            <a href="#features" class="header__link">Features</a>
+            <div class="header__dropdown-container">
+              <button class="header__link header__dropdown-btn">More
+                <svg width="1em" height="1em" class="header__dropdown-icon" viewBox="0 0 25 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)">
+                  <path
+                    d="M5.54779 9.09467C5.84069 8.80178 6.31556 8.80178 6.60846 9.09467L12.3281 14.8143L18.0478 9.09467C18.3407 8.80178 18.8156 8.80178 19.1085 9.09467C19.4013 9.38756 19.4013 9.86244 19.1085 10.1553L12.8585 16.4053C12.5656 16.6982 12.0907 16.6982 11.7978 16.4053L5.54779 10.1553C5.2549 9.86244 5.2549 9.38756 5.54779 9.09467Z"
+                    fill="currentColor" />
+                </svg>
+              </button>
+              <div class="header__dropdown-menu">
+                <div class="header__dropdown-deadSpace"></div>
+                <div class="header__dropdown">
+                  <div>
+                    <a href="#faq" class="header__link header__link-dropdown">FAQ</a>
+                  </div>
+                  <div>
+                    <a href="#about" class="header__link header__link-dropdown">About</a>
+                  </div>
+                  <div>
+                    <a href="#testimonials" class="header__link header__link-dropdown">Testimonials</a>
+                  </div>
+                  <div>
+                    <a href="#support" class="header__link header__link-dropdown">Support</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__separator"></div>
+
+          <div class="themeSwitcher">
+            <div class="themeSwitcher-thumb"></div>
+            <button class="themeSwitcher-btn themeSwitcher-btn1">
+              <i class="lni lni-sun-1 themeSwitcher-icon-sun"></i>
+            </button>
+            <button class="themeSwitcher-btn themeSwitcher-btn2">
+              <i class="lni lni-moon-half-right-5 themeSwitcher-icon-moon"></i>
+            </button>
+          </div>
+
+          <a href="/sign-in.html" class="header__sign-in-btn">Sign in</a>
+          <a href="/sign-in.html" class="btn header__enter-app-btn">Begin Journey <svg width="1em" height="1em"
+              viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+              class="header__enter-app-btn__arrow" transform="rotate(0 0 0)">
+              <path
+                d="M21.0791 12.519C21.0744 12.7044 21.0013 12.8884 20.8599 13.0299L14.8639 19.0301C14.5711 19.3231 14.0962 19.3233 13.8032 19.0305C13.5103 18.7377 13.5101 18.2629 13.8029 17.9699L18.5233 13.2461L4.32813 13.2461C3.91391 13.2461 3.57813 12.9103 3.57812 12.4961C3.57812 12.0819 3.91391 11.7461 4.32812 11.7461L18.5158 11.7461L13.8029 7.03016C13.5101 6.73718 13.5102 6.2623 13.8032 5.9695C14.0962 5.6767 14.5711 5.67685 14.8639 5.96984L20.813 11.9228C20.976 12.0603 21.0795 12.2661 21.0795 12.4961C21.0795 12.5038 21.0794 12.5114 21.0791 12.519Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div class="mobile__nav" id="mobile-nav">
+        <div class="mobile__nav-container container">
+          <nav class="mobile__nav-link-container">
+            <a href="#courses" class="mobile__nav-link">Courses</a>
+            <a href="#features" class="mobile__nav-link">Features</a>
+            <a href="#testimonials" class="mobile__nav-link">Testimonials</a>
+            <a href="#faq" class="mobile__nav-link">FAQ</a>
+            <a href="#about" class="mobile__nav-link">About</a>
+            <div class="mobile__nav-separator"></div>
+
+            <div class="themeSwitcher">
+              <div class="themeSwitcher-thumb"></div>
+              <button class="themeSwitcher-btn themeSwitcher-btn1">
+                <i class="lni lni-sun-1 themeSwitcher-icon-sun"></i>
+              </button>
+              <button class="themeSwitcher-btn themeSwitcher-btn2">
+                <i class="lni lni-moon-half-right-5 themeSwitcher-icon-moon"></i>
+              </button>
+            </div>
+
+            <a href="/sign-in.html" class="mobile__nav-sign-in-btn">Sign in</a>
+            <a href="/sign-in.html" class="btn mobile__nav-enter-app-btn">Begin Journey <svg width="1em" height="1em"
+                viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                class="mobile__nav-enter-app-btn__arrow" transform="rotate(0 0 0)">
+                <path
+                  d="M21.0791 12.519C21.0744 12.7044 21.0013 12.8884 20.8599 13.0299L14.8639 19.0301C14.5711 19.3231 14.0962 19.3233 13.8032 19.0305C13.5103 18.7377 13.5101 18.2629 13.8029 17.9699L18.5233 13.2461L4.32813 13.2461C3.91391 13.2461 3.57813 12.9103 3.57812 12.4961C3.57812 12.0819 3.91391 11.7461 4.32812 11.7461L18.5158 11.7461L13.8029 7.03016C13.5101 6.73718 13.5102 6.2623 13.8032 5.9695C14.0962 5.6767 14.5711 5.67685 14.8639 5.96984L20.813 11.9228C20.976 12.0603 21.0795 12.2661 21.0795 12.4961C21.0795 12.5038 21.0794 12.5114 21.0791 12.519Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section hidden fade-in">
+      <div class="hero__container container">
+        <picture>
+
+          <source srcset="/assets/images/Hero-Img.avif" type="image/avif">
+          <source srcset="/assets/images/Hero-Img.png" type="image/png">
+
+          <img src="/assets/images/Hero-Img.avif"
+            alt="Logo for Battle Stack, a programming course website, featuring a stylized sword or shield made of code fragments, in energetic blues and oranges."
+            class="hero__img" width="500" height="500" loading="lazy">
+        </picture>
+        <h1 class="hero__title">Your coding quest begins here.</h1>
+        <p class="hero__description1">
+          <strong>Battle Stack</strong> is more than just learning to code. It's about rising to the challenge,
+          conquering
+          complexity, and
+          becoming the developer you were destined to be.
+        </p>
+        <p class="hero__description2">
+          This is where your developer legacy begins. The road ahead will challenge you. You’ll wrestle with confusing
+          bugs, conquer tricky layouts, and power through complex logic. Every victory will make you stronger.
+          <strong>Battle Stack</strong> is your forge: the place where aspiring devs become truly battle ready.
+        </p>
+        <a href="/sign-in.html" class="btn hero__btn">Face your First Challenge</a>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="course section container hidden fade-in " id="courses">
+      <h2 class="title">Featured Courses</h2>
+      <div class="course__item-container">
+        <div class="course__item course__item-margin-0 course__item--javascript slide-right hidden" id="javascript">
+          <div class="course__item-banner course__item-banner-popular">
+            <span class="course__item-banner-title">🔥 Popular (most enrolled)</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">JavaScript</h3>
+            <p class="course__item-description1">Discover the power of JavaScript for modern web development.</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">JavaScript is a powerful scripting language used to create interactive
+            and dynamic content on web pages. It controls behavior, user interaction, and enables features like
+            animations, forms, and real-time updates.</p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+        <div class="course__item course__item--css slide-left hidden" id="css">
+          <div class="course__item-banner course__item-banner-popular">
+            <span class="course__item-banner-title">🔥 Popular (most enrolled)</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">CSS</h3>
+            <p class="course__item-description1">Complete CSS from fundamentals to advanced techniques.</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">CSS (Cascading Style Sheets) is a stylesheet language responsible for
+            the
+            styling of your web page. It defines how HTML elements are displayed, positioned, and rendered across
+            different screen sizes.</p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+        <div class="course__item course__item--nextjs slide-right hidden" id="nextjs">
+          <div class="course__item-banner course__item-banner-popular">
+            <span class="course__item-banner-title">🔥 Popular (most enrolled)</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">NextJS</h3>
+            <p class="course__item-description1">Discover how to build production-ready apps with Next.js</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">Next.js is a React-based framework for building modern,
+            production-ready
+            web applications. It offers server-side rendering, routing, and performance optimizations out of the box.
+          </p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+        <div class="course__item course__item--flutter slide-left hidden" id="flutter">
+          <div class="course__item-banner course__item-banner-popular">
+            <span class="course__item-banner-title">🔥 Popular (most enrolled)</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">Flutter</h3>
+            <p class="course__item-description1">Build beautiful fast apps for mobile web and desktop with Flutter all
+              from a single codebase.</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">Flutter is an open-source UI toolkit developed by Google for building
+            natively compiled mobile, web, and desktop applications from a single codebase. It uses the Dart language
+            and offers fast development with expressive, flexible UIs.
+          </p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+        <div class="course__item course__item--java slide-right hidden" id="java">
+          <div class="course__item-banner course__item-banner-new">
+            <span class="course__item-banner-title">🆕 Newly launced</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">Java</h3>
+            <p class="course__item-description1">Learn Java and build reliable cross-platform applications for web
+              mobile and desktop with object-oriented programming.</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">Java is a high-level, object-oriented programming language widely used
+            for building desktop, web, and mobile applications. Known for its portability and reliability, Java powers
+            everything from enterprise systems to Android apps.
+          </p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+        <div class="course__item course__item--reactjs slide-left hidden" id="reactjs">
+          <div class="course__item-banner course__item-banner-new">
+            <span class="course__item-banner-title">🆕 Newly launced</span>
+          </div>
+          <div>
+            <h3 class="course__item-title">ReactJS</h3>
+            <p class="course__item-description1">Learn ReactJS and build powerful user interfaces with ease</p>
+            <p class="course__item-length">Duration: <span class="course__item-length-hours">--</span></p>
+          </div>
+          <p class="course__item-description2">ReactJS is a JavaScript library for building fast and interactive user
+            interfaces. It uses a component-based structure, making it easier to manage and scale web applications
+            efficiently.</p>
+          <button class="btn course__item-btn">Start Learning</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About  -->
+    <section class="about section hidden fade-in" id="about">
+      <div class="about__container container">
+        <h2 class="title">About</h2>
+        <div class="about__item-container">
+          <div class="about__item1">
+            <h2 class="about__item1-title">Welcome to Battle Stack</h2>
+            <p class="about__item1-description1">I launched <strong>Battle Stack</strong> as a passion project to
+              challenge
+              the way we learn and share coding knowledge.
+              Whether you're building full stack apps, experimenting with frameworks, or diving deep into developer
+              tools,
+              you're in the right place.</p>
+            <p class="about__item1-description2"> This platform is powered by the developer community. Every article,
+              video,
+              and tutorial is created with one goal —
+              to help you grow your skills and confidently master your tech stack. Whether you're just getting started
+              or
+              already experienced,
+              I'm happy you're here and I’m focused on delivering content that informs, challenges, and inspires.</p>
+            <form action="#" class="about__item1-form" method="POST">
+              <label for="email" id="email" class="about__item1-label"><i
+                  class="lni lni-envelope-1 about__item1-labelIcon"></i> Get updates or
+                early access</label>
+              <div class="about__item1-form-inputWrapper">
+                <input type="email" id="email" class="about__item1-input" placeholder="Enter your email..." required>
+                <button class="btn about__item1-btn" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="about__item2">
+            <div>
+              <p class="about__item2-label">Registered Developers</p>
+              <h3 class="about__item2-stat">
+                <span class="about__item2-count" data-count="5200" aria-label="5,200 +members"
+                  id="registered_members_count">0</span><span class="about__item2-countType">+members</span>
+              </h3>
+            </div>
+            <div>
+              <p class="about__item2-label">Challenges Completed</p>
+              <h3 class="about__item2-stat">
+                <span class="about__item2-count" data-count="12700" aria-label="12,700 +members"
+                  id="challenges_completed_count">0</span><span class="about__item2-countType">+completed</span>
+              </h3>
+            </div>
+            <div>
+              <p class="about__item2-label">Articles & Tutorials Published</p>
+              <h3 class="about__item2-stat">
+                <span class="about__item2-count" data-count="340" aria-label="340 +members"
+                  id="articles_tutorials_published_count">0</span><span class="about__item2-countType">+posts</span>
+              </h3>
+            </div>
+            <div>
+              <p class="about__item2-label">Tech Stacks Explored</p>
+              <h3 class="about__item2-stat">
+                <span class="about__item2-count" data-count="28" aria-label="28 +members"
+                  id="tech_stacks_count">0</span><span class="about__item2-countType">+stacks</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial section container hidden fade-in" id="testimonials">
+      <h2 class="title">Voices of Victory</h2>
+      <h2 class="testimonial__title">
+        Testimonial
+      </h2>
+      <p class="testimonial__description">Startups, solo builders, and teams across the globe share how Battle Stack
+        elevated their workflows and ignited growth.</p>
+      <div class="testimonial__container swiper">
+        <div class="swiper-wrapper">
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=5" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Sophie Navarro</p>
+                  <p class="testimonial__box-profile-position">Freelance Web Developer</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">I landed my first freelance gig after finishing the Frontend course.
+              The
+              real-world exercises made all the difference. </p>
+          </div>
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=8" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Noah Velasquez</p>
+                  <p class="testimonial__box-profile-position">Founder, CodeCampPh</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">As someone building a coding community in the Philippines, I’m always
+              on
+              the lookout for solid, beginner-friendly resources. Battle Stack exceeded expectations. </p>
+          </div>
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=10" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Isabella Cruz</p>
+                  <p class="testimonial__box-profile-position">CS Student</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">Battle Stack made it easier for me to actually enjoy coding. The
+              lessons
+              are clear and straight to the point, perfect for anyone trying to break into tech.</p>
+          </div>
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=21" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Janelle Ortega</p>
+                  <p class="testimonial__box-profile-position">Frontend Dev</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">The step-by-step format helped me understand concepts I used to
+              struggle
+              with. It gave me the confidence to apply for dev jobs and get one!</p>
+          </div>
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=54" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Marcus Reyes</p>
+                  <p class="testimonial__box-profile-position">Web Developer</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">I’ve taken several online courses, but Battle Stack stands out. The
+              real-world projects helped me land my first freelance client.</p>
+          </div>
+          <div class="testimonial__box swiper-slide">
+            <div class="testimonial__box--top">
+              <div class="testimonial__box-profile">
+                <img src="https://i.pravatar.cc/150?img=25" alt="client image" width="150" height="150"
+                  class="testimonial__box-profile-img">
+                <div>
+                  <p class="testimonial__box-profile-name">Avery Chen</p>
+                  <p class="testimonial__box-profile-position">Full Stack Engineer</p>
+                </div>
+              </div>
+              <svg width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" transform="rotate(0 0 0)"
+                class="testimonial__box-profile-qoutesIcon">
+                <path
+                  d="M6.94664 18.1774C6.94624 18.1776 6.94586 18.1778 6.62567 17.5021L6.94664 18.1774C6.71429 18.2875 6.44096 18.2713 6.22368 18.1338C6.0064 17.9963 5.87469 17.7571 5.87469 17.5V14.9428C3.67613 14.5844 1.99805 12.6765 1.99805 10.3766C1.99805 7.82142 4.06947 5.75 6.62469 5.75C9.17992 5.75 11.2513 7.82142 11.2513 10.3766C11.2513 13.222 10.202 15.1727 9.13017 16.4114C8.59826 17.0262 8.06521 17.461 7.66099 17.7445C7.45857 17.8864 7.28741 17.9911 7.16329 18.062C7.1012 18.0974 7.05074 18.1245 7.01389 18.1437C6.99546 18.1532 6.98041 18.1608 6.969 18.1665L6.95462 18.1735L6.94953 18.176L6.94664 18.1774Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.6966 18.1774C17.6962 18.1776 17.6959 18.1778 17.3747 17.5L17.6966 18.1774C17.4643 18.2875 17.191 18.2713 16.9737 18.1338C16.7564 17.9963 16.6247 17.7571 16.6247 17.5V14.9428C14.4261 14.5844 12.748 12.6765 12.748 10.3766C12.748 7.82142 14.8195 5.75 17.3747 5.75C19.9299 5.75 22.0013 7.82142 22.0013 10.3766C22.0013 13.222 20.952 15.1727 19.8802 16.4114C19.3483 17.0262 18.8152 17.461 18.411 17.7445C18.2086 17.8864 18.0374 17.9911 17.9133 18.062C17.8512 18.0974 17.8007 18.1245 17.7639 18.1437C17.7455 18.1532 17.7304 18.1608 17.719 18.1665L17.7046 18.1735L17.6995 18.176L17.6966 18.1774Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <p class="testimonial__box-comment">Battle Stack helped me refine both my frontend and backend skills.
+              Whether
+              you're building your first app or your tenth, the content pushes you to grow.</p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features section hidden fade-in" id="features">
+      <div class="features__container container">
+        <h2 class="title">Features</h2>
+        <div class="features__container-content">
+          <div class="features__content">
+            <h2 class="features__content-title">Master the Web with Battle Stack</h2>
+            <p class="features__content-description">Battle Stack gives you the tools and structure you need to level up
+              your web
+              development skills. Build, deploy and scale your projects with confidence. No fluff, just what matters.
+            </p>
+            <a href="#" class="btn features__content-button">Get Started</a>
+          </div>
+          <div class="features__grid-container">
+            <div class="features__box slide-left hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="features__box-icon" width="1em" height="1em">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+              </svg>
+              <h3 class="features__box-title">Everything You Need</h3>
+              <p class="features__box-description">Battle Stack gives you a battle-tested toolkit from frontend to
+                backend,
+                so you can build fast, ship faster, and scale without stress.</p>
+            </div>
+            <div class="features__box slide-left hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="features__box-icon" width="1em" heigth="1em">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>
+              <h3 class="features__box-title">Built for Learners & Pros</h3>
+              <p class="features__box-description">Whether you're just starting out or already deep in the code
+                trenches,
+                Battle Stack adapts to your skill level and accelerates your growth.</p>
+            </div>
+            <div class="features__box slide-left hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="features__box-icon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+              </svg>
+              <h3 class="features__box-title">Ready to Deploy Stack</h3>
+              <p class="features__box-description"> Launch with confidence using optimized tools, production-ready
+                templates, and scalable workflows built into every project.</p>
+            </div>
+            <div class="features__box slide-left hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="features__box-icon" width="1em" height="1em">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+              </svg>
+              <h3 class="features__box-title">Ready to Deploy Stack</h3>
+              <p class="features__box-description"> Launch with confidence using optimized tools, production-ready
+                templates, and scalable workflows built into every project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section hidden fade-in" id="faq">
+      <div class="faq__container container">
+        <h2 class="title">Faq</h2>
+        <h2 class="faq__title">
+          Frequently asked questions
+        </h2>
+        <p class="faq__description">Not sure how it all works? No worries. Check out our most frequently asked questions
+          and find the answers you need to get started with Battle Stack.</p>
+        <div class="faq__container-content">
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                What makes Battle Stack different from other coding platforms?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              Battle Stack combines practical tools with real-world challenges, helping you build, learn, and grow
+              faster
+              without the fluff.
+            </div>
+          </div>
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                I'm completely new to coding. Can I still start with Battle Stack?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              Absolutely. Battle Stack is beginner-friendly and guides you step by step, making it easy to start coding
+              even with zero experience.
+            </div>
+          </div>
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                What kind of challenges will I face?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              You'll take on real-world tasks like fixing bugs, building responsive layouts, and solving logic problems.
+              These are the kinds of challenges developers face every day.
+            </div>
+          </div>
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                Is there a structured path to follow?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              Yes, Battle Stack offers a clear learning path that guides you from the basics to advanced concepts, so
+              you
+              always know what to focus on next.
+            </div>
+          </div>
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                Will I be ready for real-world development after this?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              Yes, Battle Stack equips you with practical skills and project-based experience, so you’ll be confident
+              and
+              prepared for real-world development.
+            </div>
+          </div>
+          <div class="faq__box">
+            <button class="faq__btn-question" aria-expanded="false">
+              <span class="faq__btn-content">
+                Why is it called “Battle Stack”?
+                <i class="lni lni-plus faq__btn-icon"></i>
+              </span>
+            </button>
+            <div class="faq__answer" hidden>
+              Because becoming a developer takes grit. Battle Stack is designed to prepare you for the real challenges
+              of
+              coding, sharpening your skills through hands-on learning, one challenge at a time.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section hidden fade-in" id="cta">
+      <div class="cta__container container">
+        <picture>
+
+          <source srcset="/assets/images/battle-stack-logo.avif" type="image/avif" />
+          <source srcset="/assets/images/battle-stack-logo.png" type="image/png" />
+
+          <img src="/assets/images/battle-stack-logo.avif"
+            alt="Logo for Battle Stack, a programming course website, featuring a stylized sword or shield made of code fragments, in energetic blues and oranges."
+            width="528" height="473" class="cta__img" loading="lazy">
+        </picture>
+        <h2 class="cta__title">The code won't write itself.</h2>
+        <p class="cta__description">
+          Join Battle Stack and take your first step into the developer’s arena. Learn modern web development with real
+          tools, real projects, and real progress.
+        </p>
+        <a href="#" class="btn cta__btn">Begin Journey <svg width="1em" height="1em" viewBox="0 0 25 25" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cta__enter-app-btn__arrow"
+            transform="rotate(0 0 0)">
+            <path
+              d="M21.0791 12.519C21.0744 12.7044 21.0013 12.8884 20.8599 13.0299L14.8639 19.0301C14.5711 19.3231 14.0962 19.3233 13.8032 19.0305C13.5103 18.7377 13.5101 18.2629 13.8029 17.9699L18.5233 13.2461L4.32813 13.2461C3.91391 13.2461 3.57813 12.9103 3.57812 12.4961C3.57812 12.0819 3.91391 11.7461 4.32812 11.7461L18.5158 11.7461L13.8029 7.03016C13.5101 6.73718 13.5102 6.2623 13.8032 5.9695C14.0962 5.6767 14.5711 5.67685 14.8639 5.96984L20.813 11.9228C20.976 12.0603 21.0795 12.2661 21.0795 12.4961C21.0795 12.5038 21.0794 12.5114 21.0791 12.519Z"
+              fill="currentColor" />
+          </svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container hidden fade-in">
+    <div class="footer__container1">
+      <div>
+        <div class="footer__container-title">
+          <picture>
+
+            <source srcset="/assets/images/battle-stack-logo.avif" type="image/avif" />
+            <source srcset="/assets/images/battle-stack-logo.png" type="image/png" />
+
+            <img src="/assets/images/battle-stack-logo.avif"
+              alt="Logo for Battle Stack, a programming course website, featuring a stylized sword or shield made of code fragments, in energetic blues and oranges."
+              class="footer__logo" width="528" height="473" loading="lazy">
+          </picture>
+          <span class="footer__title">Battle Stack</span>
+        </div>
+        <p class="footer__description">Train with purpose. Build with skill. Conquer the stack and become the developer
+          you were meant to be.</p>
+      </div>
+      <p class="footer__legal" id="footer__copyright">&copy;<span class="footer__copyright-year">2025</span> Battle
+        Stack. All rights
+        reserved.</p>
+    </div>
+    <div class="footer__container2">
+      <div class="footer__box" id="footer__box1">
+        <h4 class="footer__heading">Courses</h4>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#javascript">JavaScript</a>
+          </li>
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#css">CSS</a></li>
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#nextjs">NextJS</a></li>
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#flutter">Flutter</a></li>
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#java">Java</a></li>
+          <li class="footer__list-item"><a class="footer__list-item-link" href="#reactjs">ReactJS</a></li>
+        </ul>
+      </div>
+      <div class="footer__box" id="footer__box2">
+        <h4 class="footer__heading">Resourses</h4>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__list-item-link" href="#">Blog</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__list-item-link" href="#">FAQs</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__list-item-link" href="#">Support</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__list-item-link" href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer__box" id="footer__box3">
+        <h4 class="footer__heading">Stay Connected</h4>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__list-item-link" target="_blank"
+              rel="noopener nonreferrer">Email</a></li>
+          <li class="footer__list-item"><a href="https://discord.com/" class="footer__list-item-link" target="_blank"
+              rel="noopener nonreferrer">Discord</a>
+          </li>
+          <li class="footer__list-item"><a href="https://www.youtube.com/" class="footer__list-item-link"
+              target="_blank" rel="noopener nonreferrer">Youtube</a>
+          </li>
+          <li class="footer__list-item"><a href="https://www.instagram.com/" class="footer__list-item-link"
+              target="_blank" rel="noopener nonreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__legal" id="footer__bottom-copyright">&copy;<span class="footer__copyright-year"></span> Battle
+      Stack. All rights
+      reserved.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
