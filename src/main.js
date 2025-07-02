@@ -31,6 +31,28 @@ import themeSwitcher from "./util/themeSwitcher";
   countOnScroll();
   themeSwitcher();
 
+  const scrollBtn = document.querySelector(".scrollToTop");
+
+  scrollBtn.addEventListener("click", function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", function showScrollBtn() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollTop + windowHeight >= documentHeight - 1) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
   const dropdownContainer = document.querySelector(
     ".header__dropdown-container"
   );

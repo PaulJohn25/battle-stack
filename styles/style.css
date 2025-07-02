@@ -168,3 +168,30 @@ a:focus-visible {
 .slide-left.show {
   transform: translateX(0);
 }
+
+.scrollToTop {
+  position: fixed;
+  bottom: 50px;
+  right: -100px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #f43f5e;
+  /* box-shadow: rgba(244, 63, 94, 0.8) 0px 50px 100px -20px,
+    rgba(244, 63, 94, 0.9) 0px 30px 60px -30px; */
+  transition: all 0.3s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scrollToTop:hover {
+  box-shadow: 0px 10px 60px #fb7185;
+}
+
+.scrollToTop.show {
+  right: 20px;
+}
+
+.scrollToTop__icon {
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  color: #e2e8f0;
+}
