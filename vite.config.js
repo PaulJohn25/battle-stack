@@ -1,13 +1,12 @@
 // vite.config.js
 import { defineConfig } from "vite";
-import { resolve } from "path";
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        signin: resolve(__dirname, "sign-in.html"),
+        main: "index.html",
+        signin: "sign-in.html",
       },
     },
   },
