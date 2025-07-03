@@ -3,15 +3,17 @@
   left: 0;
   width: 100%;
   background-color: var(--clr-dark);
-  height: 0;
+  height: 100vh;
   transition: height 0.3s ease-in-out;
   will-change: height;
   z-index: 999;
   overflow: hidden;
+  display: none;
+  transition: display 0.3s ease-in-out;
 }
 
 .mobile__nav.show {
-  height: 100vh;
+  display: block;
 }
 
 .mobile__nav-container {

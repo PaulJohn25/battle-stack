@@ -1,5 +1,9 @@
 /* === Hero Section === */
 
+.hero.section {
+  margin-top: 12rem;
+}
+
 .hero__container {
   text-align: center;
 }

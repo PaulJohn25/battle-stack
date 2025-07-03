@@ -31,6 +31,16 @@ import themeSwitcher from "./util/themeSwitcher";
   countOnScroll();
   themeSwitcher();
 
+  const headerContainer = document.querySelector(".header__container");
+
+  window.addEventListener("scroll", function () {
+    const scrollY = window.scrollY;
+    const headerHeight = headerContainer.offsetHeight - 30;
+    const isScrolled = scrollY > headerHeight;
+
+    headerContainer.classList.toggle("add-shadow", isScrolled);
+  });
+
   const scrollBtn = document.querySelector(".scrollToTop");
 
   scrollBtn.addEventListener("click", function scrollToTop() {
